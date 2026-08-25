@@ -7,7 +7,7 @@
 **Resposta:** 1 - Atributo simples.
 2 - Atributo Composto.
 3 - Atributo multivalorado
-4 - Atribut0 derivado.
+4 - Atributo derivado.
 **Exercício nível 3 - Extração**
 **Resposta:** 1 - ALUNO, PLANO e CONTRATO.
 2 - data_de_inicio e situação.
@@ -25,4 +25,9 @@
 4 - RECEITA = retângulo simples ETAPA = retângulo duplo. O relacionamento entre elas deve ser um losango duplo e o atributo da chave parcial deve ter um sublinhado tracejado.
 **Exercício nível 6 - Avaliação** 
 **Resposta:** 1/2 - Usar o "nome" como identificador (ID) é uma fragilidade pois são homônimos e podem ter pessoas com o mesmo nome, o certo é criar um identificador substituto (tipo id_cliente). Outra fragilidade é "telefone" em uma única string pois esconde a multiplicidade de dados e deve ser transformado em atributo multivalorado. "Idade armazenada" é outra fragilidade pois a idade pode ficar desatualizada. O certo é armazenar data de nascimento e transformar idade em atributo derivado. E "endereço indivisível" é uma fragilidade pois dificulta buscas e filtros, como por rua, número etc e deve ser transformado em atributo composto.
-3 - As decisões dependem do uso esperado pelo sistema. Por exemplo, se a loja só precisa de um telefone para contato rápido, um atributo simples bastaria. Se ela precisasse enviar correspondências separando por CEP da rua, p endereço composto seria obrigatório.
+3 - As decisões dependem do uso esperado pelo sistema. Por exemplo, se a loja só precisa de um telefone para contato rápido, um atributo simples bastaria. Se ela precisasse enviar correspondências separando por CEP da rua, o endereço composto seria obrigatório.
+**Exercício desafio final** 
+**Resposta:** 1 - AUTOR:nome OBRA:título USUÁRIO:nome EMPRÉSTIMO:data_retirada e data_devolução EXEMPLAR:numero_exemplar.
+2 - Foram criados identificadores substitutos (chaves principais) para entidades fortes, como id_autor, id_obra, id_usuário e id_empréstimo.
+3 - Existe a entidade fraca EXEMPLAR pois depende totalmente da existência da entidade forte OBRA.
+4 - Os IDs (id_autor, id_obra...etc) e as datas e nomes são atributos simples. Já o relevante, é o numero_exemplar classificado como uma chave parcial.
