@@ -32,6 +32,7 @@
 **Resposta:** 1/2 - Usar o "nome" como identificador (ID) é uma fragilidade pois são homônimos e podem ter pessoas com o mesmo nome, o certo é criar um identificador substituto (tipo id_cliente). Outra fragilidade é "telefone" em uma única string pois esconde a multiplicidade de dados e deve ser transformado em atributo multivalorado. "Idade armazenada" é outra fragilidade pois a idade pode ficar desatualizada. O certo é armazenar data de nascimento e transformar idade em atributo derivado. E "endereço indivisível" é uma fragilidade pois dificulta buscas e filtros, como por rua, número etc e deve ser transformado em atributo composto.
 3 - As decisões dependem do uso esperado pelo sistema. Por exemplo, se a loja só precisa de um telefone para contato rápido, um atributo simples bastaria. Se ela precisasse enviar correspondências separando por CEP da rua, o endereço composto seria obrigatório.
 **Diagrama Versão Revisada (Cliente):**
+
 ![Diagrama Cliente](Cliente.drawio.png)
 
 **Exercício desafio final** 
